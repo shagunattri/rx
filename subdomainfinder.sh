@@ -28,15 +28,26 @@ sort -u $url/recon/assets.txt >> $url/recon/subdomains.txt
 rm $url/recon/assets.txt
 echo "[+] Subdomains of $1 are harvested with OWASP Amass"
 
+echo " "
+
+echo "[+] Probing for alive domains and sorting the final result "
+
+cat $url/recon/subdomains.txt | sort -u | httprobe -s -p https:443 | sed 's/https\?:\/\///' | tr -d ':443' >> $url/recon/alivedomains.txt
+
+
 sleep 1
 
-echo "[+] Results are available at $url/recon/sundomains.txt"
+echo "[+] All the subdomains are at $url/recon/sundomains.txt"
 
 echo " "
 
+echo "[+] All the alive subdomains are at $url/recon/alivedomains.txt"
+
+echo " "
 echo "To look at Results: "
 
 echo "cat $url/recon/subdomains.txt"
+echo "cat $url/recon/alivesubdomains.txt"
 
 echo " "
 
