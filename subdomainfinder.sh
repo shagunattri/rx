@@ -64,7 +64,9 @@ subjack -w $url/recon/final.txt -t 100 -timeout 30 -ssl -c ~/go/src/github.com/h
 echo "[+] Scanning for open ports..."
 nmap -iL $url/recon/httprobe/alive.txt -T4 -oA $url/recon/scans/scanned.txt
 
-
+cho "[+] Pulling and compiling all possible params found in wayback data..."
+cat $url/recon/wayback/wayback_output.txt | grep '?*=' | cut -d '=' -f 1 | sort -u >> $url/recon/wayback/params/wayback_params.txt
+for line in $(cat $url/recon/wayback/params/wayback_params.txt);do echo $line'=';done
 
 echo "[+] Pulling and compiling js/php/aspx/jsp/json files from wayback output..."
 for line in $(cat $url/recon/wayback/wayback_output.txt);do
