@@ -25,12 +25,13 @@ Enumeration and automation shellscript to find subdomains and other extra featur
 
 Integrates tools written in Go to automate the process of web Enumeration with features such as:
 
+
+## Features
 - Subdomain Enumeration
 - Find alive Subdomdomains
 - Look for possible Domain takeover 
--  Screenshots of domain.
--  Nmap Scan for Open Ports
--  Wayback Machine Search
+- Screenshots of domain.
+- Nmap Scan for Open Ports
 
 
 
@@ -40,7 +41,28 @@ Integrates tools written in Go to automate the process of web Enumeration with f
 - Any *nix system
 
 
+
+### Installation
+```
+$ git clone https://github.com/shagunattri/sub3num.git
+
+$ cd sub3num/
+
+$ ./sub3num <domain>
+```
+
+### Usage
+
+```
+ ./sub3num <domain>
+```
+
+
 ### Screenshots
+
+
+![sub3num](https://user-images.githubusercontent.com/29366864/80619137-e19f5d80-8a61-11ea-90b3-6f9483b4a326.png)
+
 
 
 ### Tools utilised
@@ -50,3 +72,4 @@ Integrates tools written in Go to automate the process of web Enumeration with f
 - [httprobe](https://github.com/tomnomnom/httprobe)
 - [Gowitness](https://github.com/sensepost/gowitness)
 - [subjack](https://github.com/haccer/subjack)
+- [nmap](https://github.com/nmap/nmap)
