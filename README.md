@@ -19,11 +19,11 @@
 ```
 
 
-Automate your Web Enumeration with sub3num.
+Automate your Web Enumeration and save time with sub3num.
 
 Enumeration and automation shellscript to find subdomains and other extra features.
 
-Integrates tools written in Go to automate the process of web Enumeration with features such as:
+Integrates tools written in Go to automate the process of web application enumeration.
 
 
 ## Features
