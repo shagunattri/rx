@@ -84,3 +84,6 @@ if [ ! -f "$url/recon/potential_takeovers/potential_takeovers.txt" ];then
     touch $url/recon/potential_takeovers/potential_takeovers.txt
 fi
 subjack -w $url/recon/assetfinder/assetfinder-final.txt -t 100 -timeout 30 -ssl -c ~/go/src/github.com/haccer/subjack/fingerprints.json -v 3 -o $url/recon/potential_takeovers/potential_takeovers.txt
+
+
+
