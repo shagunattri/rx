@@ -1,16 +1,14 @@
 ## 🌐sub3num
 
 
-```                                                                                 
+```bash                                                                        
                           #####                          
   ####   #    #  #####   #     #  #    #  #    #  #    # 
  #       #    #  #    #        #  ##   #  #    #  ##  ## 
   ####   #    #  #####    #####   # #  #  #    #  # ## # 
       #  #    #  #    #        #  #  # #  #    #  #    # 
  #    #  #    #  #    #  #     #  #   ##  #    #  #    # 
-  ####    ####   #####    #####   #    #   ####   #    # 
-                                                         
-                                                                    
+  ####    ####   #####    #####   #    #   ####   #    #           
 ```
 
 
@@ -22,6 +20,7 @@ Integrates tools written in Go to automate the process of web application enumer
 
 
 ## Features
+- Install essential reconnaissance tools and dependencies
 - Subdomain Enumeration
 - Find alive Subdomdomains
 - Look for possible Domain takeover 
@@ -39,7 +38,18 @@ Integrates tools written in Go to automate the process of web application enumer
 
 ### Installation
 
+```bash
+$ chmod +x installer-archbased.sh
+
+$ ./installer-archbased # installs all prerequisite tools for arch based distros
 ```
+
+```bash
+$ chmod +x installer-debian.sh
+
+$ ./installer-debian  # installs all prerequisite tools for debian based distros
+```
+``` console
 $ git clone https://github.com/shagunattri/sub3num.git
 
 $ cd sub3num/
@@ -49,7 +59,7 @@ $ ./sub3num <domain>
 
 ### Usage
 
-```
+```console
  ./sub3num <domain>
 ```
 
@@ -69,3 +79,14 @@ $ ./sub3num <domain>
 - [Gowitness](https://github.com/sensepost/gowitness)
 - [subjack](https://github.com/haccer/subjack)
 - [nmap](https://github.com/nmap/nmap)
+
+
+**Note**: You need to install the dependencies before installing the tools.
+
+Most of the tools are added to the PATH, you can access them from everywhere in the file system.
+
+**Run ```source $HOME/.bash_profile``` after running the script, to add tools to PATH.**
+
+## Contribution 
+
+Feel free to add more tools so that the Bug Bounty community can benefit from them.
