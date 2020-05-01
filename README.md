@@ -1,7 +1,7 @@
 ## 🌐sub3num
 
 
-```bash                                                                        
+```console                                                                    
                           #####                          
   ####   #    #  #####   #     #  #    #  #    #  #    # 
  #       #    #  #    #        #  ##   #  #    #  ##  ## 
@@ -38,16 +38,16 @@ Integrates tools written in Go to automate the process of web application enumer
 
 ### Installation
 
-```bash
+```console
 $ chmod +x installer-archbased.sh
 
-$ ./installer-archbased # installs all prerequisite tools for arch based distros
+$ ./installer-archbased # installs all prerequisite tools and dependencies for arch based distros
 ```
 
-```bash
+```console
 $ chmod +x installer-debian.sh
 
-$ ./installer-debian  # installs all prerequisite tools for debian based distros
+$ ./installer-debian  # installs all prerequisite tools and dependencies  for debian based distros
 ```
 ``` console
 $ git clone https://github.com/shagunattri/sub3num.git
@@ -79,6 +79,8 @@ $ ./sub3num <domain>
 - [Gowitness](https://github.com/sensepost/gowitness)
 - [subjack](https://github.com/haccer/subjack)
 - [nmap](https://github.com/nmap/nmap)
+
+
 
 
 **Note**: You need to install the dependencies before installing the tools.
