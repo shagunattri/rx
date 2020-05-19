@@ -66,7 +66,7 @@ load_colors() {
 
 install_dependencies() {
     echo -e "${GREEN}Installing tool dependencies ${SET}"
-    sudo pacman -S --noconfirm python3 wget unzip chromium-browser gcc make libpcap python3-pip ruby-full
+    sudo pacman -S --noconfirm python3 wget unzip chromium gcc make libpcap python-pip ruby go
     sudo ln -s /usr/bin/python3 /usr/bin/python
     curl https://sh.rustup.rs -sSf | sh
     source $HOME/.cargo/env

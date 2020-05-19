@@ -18,6 +18,7 @@ Enumeration and automation shellscript to find subdomains and other extra featur
 
 Integrates tools written in Go to automate the process of web application enumeration.
 
+script I built upon courtesy of @hmaverickadams.
 
 ## Features
 - Install essential reconnaissance tools and dependencies
@@ -92,3 +93,4 @@ Most of the tools are added to the PATH, you can access them from everywhere in 
 ## Contribution 
 
 Feel free to add more tools so that the Bug Bounty community can benefit from them.
+
