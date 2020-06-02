@@ -32,29 +32,9 @@ fi
 
 
 if [ ! -d "$url" ];then
-	mkdir $url
+	mkdir -p $url/recon/{assetfinder,amass,httprobe,nmap,gowitness,potential_takeovers}
 fi
-if [ ! -d "$url/recon" ];then
-	mkdir $url/recon
-fi
-if [ ! -d "$url/recon/assetfinder" ];then
-	mkdir $url/recon/assetfinder
-fi
-if [ ! -d "$url/recon/amass" ];then
-	mkdir $url/recon/amass
-fi
-if [ ! -d "$url/recon/httprobe" ];then
-	mkdir $url/recon/httprobe
-fi
-if [ ! -d "$url/recon/nmap" ];then
-	mkdir $url/recon/nmap
-fi
-if [ ! -d "$url/recon/gowitness" ];then
-	mkdir $url/recon/gowitness
-fi
-if [ ! -d "$url/recon/potential_takeovers" ];then
-    mkdir $url/recon/potential_takeovers
-fi
+
 
 
 echo "[+] Harvesting Subdomains with assetfinder..."
