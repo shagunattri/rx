@@ -47,25 +47,12 @@ script I built upon courtesy of @hmaverickadams.
 - Nmap Scan for Open Ports
 
 
-
-### Prerequisites
-
-- [Go](https://golang.org/) 
-- Any *nix system
-
-
-
 ### Installation
 
 ```console
-$ chmod +x installer-archbased.sh
-
 $ ./installer-archbased # installs all prerequisite tools and dependencies for arch based distros
 ```
-
 ```console
-$ chmod +x installer-debian.sh
-
 $ ./installer-debian  # installs all prerequisite tools and dependencies  for debian based distros
 ```
 ``` console

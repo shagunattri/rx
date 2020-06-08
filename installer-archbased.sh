@@ -120,7 +120,7 @@ install_gowitness() {
     pause
 }
 
-in_subjack() {
+install_subjack() {
     # https://github.com/haccer/subjack
     echo -e "${GREEN}Installing subjack ${SET}"
     go get github.com/haccer/subjack
