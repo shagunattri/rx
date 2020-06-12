@@ -27,10 +27,6 @@ if [ ! -x "$(command -v subjack)" ]; then
         echo "[-] subjack required to run script"
         exit 1
 fi
-
-
-
-
 if [ ! -d "$url" ];then
 	mkdir -p $url/recon/{assetfinder,amass,httprobe,nmap,gowitness,potential_takeovers}
 fi

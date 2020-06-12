@@ -87,8 +87,7 @@ install_assetfinder() {
 install_amass() {
     # https://github.com/OWASP/Amass
     echo -e "${GREEN}Installing Amass ${SET}"
-    go get -u github.com/OWASP/Amass/...
-    sudo cp $HOME/go/bin/amass /usr/local/bin
+    pamac install amass
     echo -e "${YELLOW}Finished installing Amass ${SET}\n"
     pause
 }
@@ -114,8 +113,7 @@ install_nmap() {
 install_gowitness() {
     # https://github.com/sensepost/gowitness
     echo -e "${GREEN}Installing gowitness ${SET}"
-    go get -u github.com/sensepost/gowitness
-    sudo cp $HOME/go/bin/gowitness /usr/local/bin
+    pamac install gowitness
     echo -e "${YELLOW}Finished installing gowitness ${SET}\n"
     pause
 }
