@@ -23,9 +23,16 @@ if [ ! -x "$(command -v html-tool)" ]; then
         echo "[-] html-tool required to run script"
         exit 1
     fi
+if [ ! -x "$(command -v nikto)" ]; then
+        echo "[-] nikto required to run script"
+        exit 1
+    fi
 if [ ! -d "$url" ];then
-	mkdir -p $url/recon/{assetfinder,httprobe}
+	mkdir -p $url/recon/{assetfinder,httprobe,nikto}
 fi
+
+echo "[+] Scanning $url web server with nikto..."
+nikto -h $url | tee -a $url/recon/nikto/serverscan
 
 echo "[+] Harvesting Subdomains with assetfinder..."
 assetfinder --subs-only $url >> $url/recon/assetfinder/domains
@@ -53,3 +60,5 @@ find . -type f | wc # word count
 echo "[+] Looking up waybackurls for $url"
 echo $url | waybackurls | head | tee -a $url/recon/waybackurls
 
+echo "[+] Directory Bruteforcing using gobuster..."
+gobuster dir  -e -u whhc.in -w wordlists/directory-list-2.3-small.txt 
