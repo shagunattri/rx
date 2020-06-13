@@ -34,6 +34,7 @@ Enumeration and automation shellscript to find subdomains and other extra featur
 Integrates tools written in Go to automate the process of web application enumeration.
 
 ## Features
+---
 
 - Install essential reconnaissance tools and dependencies
 - Subdomain Enumeration
@@ -47,6 +48,7 @@ Integrates tools written in Go to automate the process of web application enumer
 
 
 ### Installation
+---
 
 To get started, check out the installation instructions in the [documentation](install/setup.md).
 
@@ -66,6 +68,8 @@ To get started, check out the installation instructions in the [documentation](i
 
 ### Tools utilised
 
+---
+
 - [Assetfinder](https://github.com/tomnomnom/assetfinder)
 - [httprobe](https://github.com/tomnomnom/httprobe)
 - [subjack](https://github.com/haccer/subjack)
@@ -76,20 +80,13 @@ To get started, check out the installation instructions in the [documentation](i
 - [gobuster](https://github.com/OJ/gobuster)
 
 
-
-**Note**: You need to install the dependencies before installing the tools.
-
-Most of the tools are added to the PATH, you can access them from everywhere in the file system.
-
-
-***Tested on Manjaro-Arch Linux***
-
 ## Contribution 
+---
 
 Feel free to add more tools so that the Bug Bounty community can benefit from them.
 When contributing to this repository, please first discuss the change you wish to make via issue,before making a change.
 
 
 ## License
-
+---
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
