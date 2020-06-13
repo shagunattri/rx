@@ -4,4 +4,4 @@ html-tool
 subjack
 waybackurls
 nikto # uses perl 
-gobuster
+gobuster 

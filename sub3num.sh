@@ -3,7 +3,7 @@ set -euo pipefail
 
 url=$1
 
-#check for tool
+#check for tools
 if [ ! -x "$(command -v nikto)" ]; then
         echo "[-] nikto required to run script"
         exit 1
@@ -63,7 +63,7 @@ fi
 subjack -w $url/recon/assetfinder/Domains -t 100 -timeout 30 -ssl -c ~/go/src/github.com/haccer/subjack/fingerprints.json -v 3 -o $url/recon/potential_takeovers
 
 echo "[+] Total word count of files"
-find . -type f | wc # word count
+find . -type f | wc 
 
 echo "[+] Looking up waybackurls for $url"
 echo $url | waybackurls | head | tee -a $url/recon/waybackurls
