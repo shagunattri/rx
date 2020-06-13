@@ -17,13 +17,15 @@ show_menus() {
         ${SET}"
     echo -e "${CYAN}sub3num will install all the recon tools you need${SET}"
     echo "Tools:"
-    echo "   0. Install tool dependencies [GO, Python3, Ruby, Rust, Chromium, etc...]"
+    echo "   0. Install tool dependencies [GO, Python3, Ruby, etc...]"
     echo "   1. Assetfinder"
-    echo "   2. Amass"
-    echo "   3. Httprobe"
-    echo "   4. Nmap"
-    echo "   5. gowitness"
-    echo "   6. Subjack"
+    echo "   2. httprobe"
+    echo "   3. html-tool"
+    echo "   4. subjack"
+    echo "   5. waybackurls"
+    echo "   6. nikto"
+    echo "   7. gobuster"
+
     echo -e "\n\n  88. Install all tools"
     echo -e "  99. Exit\n"
 }
@@ -34,11 +36,13 @@ read_option(){
 	case $choice in
         0) install_dependencies ;;
         1) install_assetfinder ;;
-        2) install_amass ;;
-	    3) install_httprobe ;;
-	    4) install_nmap ;;
-	    5) install_gowitness ;;
-        6) install_subjack ;;
+        2) install_httprobe ;;
+	    3) install_html-tool ;;
+	    4) install_subjack ;;
+	    5) install_waybackurls ;;
+        6) install_nikto ;;
+        7) install_gobuster ;;
+
         88) install_all ;;
 	99) exit 0;;
 	*) echo -e "${RED}Error...${SET}" && sleep 2
@@ -66,30 +70,20 @@ load_colors() {
 
 install_dependencies() {
     echo -e "${GREEN}Installing tool dependencies ${SET}"
-    sudo pacman -S --noconfirm python3 wget unzip chromium gcc make libpcap python-pip ruby go
+    sudo pacman -S --noconfirm python3 wget unzip make libpcap python-pip ruby go
     sudo ln -s /usr/bin/python3 /usr/bin/python
-    curl https://sh.rustup.rs -sSf | sh
-    source $HOME/.cargo/env
     echo -e "${YELLOW}Finished installing tools' dependencies ${SET}\n"
     pause
 }
 
 install_assetfinder() {
-    # https://github.com/tomnomnom/httprobe
+    # https://github.com/tomnomnom/assetfinder
     echo -e "${GREEN}Installing assetfinder ${SET}"
     go get -u github.com/tomnomnom/assetfinder
     sudo cp $HOME/go/bin/assetfinder /usr/local/bin
     echo -e "${YELLOW}Finished installing assetfinder ${SET}\n"
     pause
 
-}
-
-install_amass() {
-    # https://github.com/OWASP/Amass
-    echo -e "${GREEN}Installing Amass ${SET}"
-    pamac install amass
-    echo -e "${YELLOW}Finished installing Amass ${SET}\n"
-    pause
 }
 
 install_httprobe() {
@@ -102,20 +96,14 @@ install_httprobe() {
 
 }
 
-install_nmap() {
-    # https://github.com/OWASP/Amass
-    echo -e "${GREEN}Installing Nmap ${SET}"
-    sudo pacman -S --noconfirm nmap
-    echo -e "${YELLOW}Finished installing Nmap ${SET}\n"
+install_html-tool() {
+    # https://github.com/tomnomnom/hacks/html-tools
+    echo -e "${GREEN}Installing html-tool ${SET}"
+    go get -u github.com/tomnomnom/hacks/html-tool
+    sudo cp $HOME/go/bin/httprobe /usr/local/bin
+    echo -e "${YELLOW}Finished installing html-tool ${SET}\n"
     pause
-}
 
-install_gowitness() {
-    # https://github.com/sensepost/gowitness
-    echo -e "${GREEN}Installing gowitness ${SET}"
-    pamac install gowitness
-    echo -e "${YELLOW}Finished installing gowitness ${SET}\n"
-    pause
 }
 
 install_subjack() {
@@ -127,6 +115,36 @@ install_subjack() {
     pause
 
 }
+
+install_waybackurls() {
+    # https://github.com/tomnomnom/waybackurls
+    echo -e "${GREEN}Installing waybackurls ${SET}"
+    go get -u github.com/tomnomnom/waybackurls
+    sudo cp $HOME/go/bin/httprobe /usr/local/bin
+    echo -e "${YELLOW}Finished installing waybackurls ${SET}\n"
+    pause
+
+}
+
+install_nikto() {
+    # https://github.com/sullo/nikto
+    echo -e "${GREEN}Installing nikto ${SET}"
+    sudo pacman -S nikto
+    echo -e "${YELLOW}Finished installing nikto ${SET}\n"
+    pause
+
+}
+
+install_gobuster() {
+    # https://github.com/OJ/gobuster
+    echo -e "${GREEN}Installing gobuster ${SET}"
+    go get github.com/OJ/gobuster
+    sudo cp $HOME/go/bin/httprobe /usr/local/bin
+    echo -e "${YELLOW}Finished installing gobuster ${SET}\n"
+    pause
+
+}
+
 
 add_to_path() {
     if [[ ":$PATH:" == *":$HOME/tools/$1:"* ]] || grep -q "$HOME/tools/$1" $HOME/.bash_profile; then
