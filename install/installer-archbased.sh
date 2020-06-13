@@ -97,7 +97,7 @@ install_httprobe() {
 }
 
 install_html-tool() {
-    # https://github.com/tomnomnom/hacks/html-tools
+    # https://github.com/tomnomnom/hacks/tree/master/html-tool
     echo -e "${GREEN}Installing html-tool ${SET}"
     go get -u github.com/tomnomnom/hacks/html-tool
     sudo cp $HOME/go/bin/httprobe /usr/local/bin

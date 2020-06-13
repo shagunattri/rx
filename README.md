@@ -29,22 +29,21 @@
 
 ****
 
-
-Automate your Web Enumeration and save time with sub3num.
-
+Automate your Web Enumeration & reconnaissance and save time with sub3num.
 Enumeration and automation shellscript to find subdomains and other extra features.
-
 Integrates tools written in Go to automate the process of web application enumeration.
 
-script I built upon courtesy of @hmaverickadams.
-
 ## Features
+
 - Install essential reconnaissance tools and dependencies
 - Subdomain Enumeration
 - Find alive Subdomdomains
 - Look for possible Domain takeover 
-- Screenshots of domain.
-- Nmap Scan for Open Ports
+- Directory busting with gobuster
+- Look a t unique HTML attribs using HTML-tool
+- Scan web server using nikto
+- Find archieve of URIs using waybackurls
+- ...and many more :)
 
 
 ### Installation
@@ -68,12 +67,13 @@ To get started, check out the installation instructions in the [documentation](i
 ### Tools utilised
 
 - [Assetfinder](https://github.com/tomnomnom/assetfinder)
-- [OWASP Amass](https://github.com/OWASP/Amass)
 - [httprobe](https://github.com/tomnomnom/httprobe)
-- [Gowitness](https://github.com/sensepost/gowitness)
 - [subjack](https://github.com/haccer/subjack)
-- [nmap](https://github.com/nmap/nmap)
-
+- [html-tool](https://github.com/tomnomnom/hacks/tree/master/html-tool)
+- [subjack](https://github.com/haccer/subjack)
+- [waybackurls](https://github.com/tomnomnom/waybackurls)
+- [nikto](https://github.com/sullo/nikto)
+- [gobuster](https://github.com/OJ/gobuster)
 
 
 
@@ -82,7 +82,7 @@ To get started, check out the installation instructions in the [documentation](i
 Most of the tools are added to the PATH, you can access them from everywhere in the file system.
 
 
-***Tested on Arch Linux***
+***Tested on Manjaro-Arch Linux***
 
 ## Contribution 
 

@@ -15,3 +15,11 @@ $ ./sub3num <domain>
 ```
 
 **Run ```source $HOME/.bash_profile``` after running the script, to add tools to PATH.**
+
+
+**Note**: You need to install the dependencies before installing the tools.
+
+Most of the tools are added to the PATH, you can access them from everywhere in the file system.
+
+
+***Tested on Manjaro-Arch Linux***
