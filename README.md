@@ -53,16 +53,10 @@ To get started, check out the installation instructions in the [documentation](i
 
 
 ### Screenshots
-
-
 ![rx](https://user-images.githubusercontent.com/29366864/80619137-e19f5d80-8a61-11ea-90b3-6f9483b4a326.png)
 
 
-
 ### Tools utilised
-
----
-
 - [Assetfinder](https://github.com/tomnomnom/assetfinder)
 - [httprobe](https://github.com/tomnomnom/httprobe)
 - [subjack](https://github.com/haccer/subjack)
@@ -72,14 +66,15 @@ To get started, check out the installation instructions in the [documentation](i
 - [nikto](https://github.com/sullo/nikto)
 - [gobuster](https://github.com/OJ/gobuster)
 
+### TODO
+- Add tools
+- Update Screenshots
+- Add more docs and scale up
 
 ## Contribution 
----
-
 Feel free to add more tools so that the Bug Bounty community can benefit from them.
 When contributing to this repository, please first discuss the change you wish to make via issue,before making a change.
 
 
 ## License
----
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
