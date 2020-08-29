@@ -1,9 +1,4 @@
-## 🌐sub3num
-
-
-
-
-
+## rx
 <p align="center">
   <a href="https://github.com/shagunattri/pwgen/pulls">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?longCache=true" alt="Pull Requests">
@@ -26,8 +21,6 @@
 </div>
 
 <br>
-
-****
 
 Automate your Web Enumeration & reconnaissance and save time with sub3num.
 Enumeration and automation shellscript to find subdomains and other extra features.
@@ -55,14 +48,14 @@ To get started, check out the installation instructions in the [documentation](i
 ### Usage
 
 ```console
- ./sub3num <domain>
+ ./rx <domain>
 ```
 
 
 ### Screenshots
 
 
-![sub3num](https://user-images.githubusercontent.com/29366864/80619137-e19f5d80-8a61-11ea-90b3-6f9483b4a326.png)
+![rx](https://user-images.githubusercontent.com/29366864/80619137-e19f5d80-8a61-11ea-90b3-6f9483b4a326.png)
 
 
 
