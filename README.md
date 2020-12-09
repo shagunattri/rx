@@ -70,6 +70,7 @@ To get started, check out the installation instructions in the [documentation](i
 - Add tools
 - Update Screenshots
 - Add more docs and scale up
+- Add option to only run a selection of tools
 
 ## Contribution 
 Feel free to add more tools so that the Bug Bounty community can benefit from them.
