@@ -69,4 +69,4 @@ echo "[+] Looking up waybackurls for $url"
 echo $url | waybackurls | head | tee -a $url/recon/waybackurls
 
 echo "[+] Directory Bruteforcing using gobuster..."
-gobuster dir  -e -u whhc.in -w wordlists/directory-list-2.3-small.txt | tee -a $url/recon/gobuster/dirbust
+gobuster dir  -e -u $1 -w wordlists/directory-list-2.3-small.txt --wildcard | tee -a $url/recon/gobuster/dirbust
