@@ -1,12 +1,13 @@
-assetfinder
-httprobe
-html-tool
-subjack
-waybackurls
+assetfinder #uses go
+httprobe #uses go
+html-tool #uses go
+subjack #uses go
+waybackurls #uses go
+gobuster  #uses go
 nikto # uses perl 
-gobuster 
 
 To add
+
 jsfsscan.sh
 XSShunter
 dirbuster

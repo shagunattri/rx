@@ -69,8 +69,11 @@ load_colors() {
 
 install_dependencies() {
     echo -e "${GREEN}Installing tool dependencies ${SET}"
+    echo -e "${GREEN}Installing GO ${SET}"
     sudo add-apt-repository ppa:longsleep/golang-backports
+    echo -e "${GREEN}Update and Upgrade System ${SET}"
     sudo apt-get update && sudo apt-get -y upgrade
+    echo -e "${GREEN}Installing python and other libraries using apt-get${SET}"
     sudo apt-get install -y golang-go build-essential python3 python3-dev wget unzip gcc make libpcap-dev python3-pip ruby-full
     sudo ln -s /usr/bin/python3 /usr/bin/python
     echo -e "${YELLOW}Finished installing tools' dependencies ${SET}\n"
@@ -130,7 +133,7 @@ install_waybackurls() {
 install_nikto() {
     # https://github.com/sullo/nikto
     echo -e "${GREEN}Installing nikto ${SET}"
-    apt-get install nikto -y
+    sudo apt-get install nikto -y
     echo -e "${YELLOW}Finished installing nikto ${SET}\n"
     pause
 
@@ -167,11 +170,12 @@ add_to_path() {
 
 install_all () {
     install_assetfinder
-    install_amass
     install_httprobe
-    install_nmap
-    install_gowitness
+    install_html-tool
     install_subjack
+    install_waybackurls
+    install_nikto
+    install_gobuster
     pause
 }
 

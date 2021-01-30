@@ -167,7 +167,6 @@ add_to_path() {
 
 install_all () {
     install_assetfinder
-    install_amass
     install_httprobe
     install_nmap
     install_gowitness
